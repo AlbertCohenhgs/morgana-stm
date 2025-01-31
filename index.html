@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Foto do Personagem -->
+        <div class="character-image">
+            <img src="img/morgana.jpg" alt="Foto do Personagem">
+        </div>
+
+        <!-- Nome e Idade Pré-definidos -->
+        <div class="character-info">
+            <p><strong>Nome:</strong> <span id="character-name">Morgana Asakura</span></p>
+            <p><strong>Idade:</strong> <span id="character-age">23</span></p>
+        </div>
+
+        <!-- Perícias -->
+        <div class="skills">
+            <h3>Perícias</h3>
+            <ul>
+                <li>FOR</li>
+                <li>AGL</li>
+                <!-- Adicione mais perícias conforme necessário -->
+            </ul>
+        </div>
+
+        <!-- Arquétipo -->
+        <div class="archetype">
+            <h3>Arquétipo</h3>
+            <p>Esbelto</p>
+        </div>
+
+        <!-- Barras de Vida e Sanidade -->
+        <div class="stats">
+            <h3>Estatísticas</h3>
+            <div class="stat-bar">
+                <strong>VIDA:</strong>
+                <div class="bar-container red-bar">
+                    <button class="decrement" onclick="updateStat('hp-current', -5)">&#xab;</button>
+                    <button class="decrement-small" onclick="updateStat('hp-current', -1)">&#x2039;</button>
+                    <span id="hp-current">0</span>/<span id="hp-max">0</span>
+                    <button class="increment-small" onclick="updateStat('hp-current', 1)">&#x203a;</button>
+                    <button class="increment" onclick="updateStat('hp-current', 5)">&#xbb;</button>
+                </div>
+            </div>
+            <div class="stat-bar">
+                <strong>SANIDADE:</strong>
+                <div class="bar-container purple-bar">
+                    <button class="decrement" onclick="updateStat('sanity-current', -5)">&#xab;</button>
+                    <button class="decrement-small" onclick="updateStat('sanity-current', -1)">&#x2039;</button>
+                    <span id="sanity-current">0</span>/<span id="sanity-max">0</span>
+                    <button class="increment-small" onclick="updateStat('sanity-current', 1)">&#x203a;</button>
+                    <button class="increment" onclick="updateStat('sanity-current', 5)">&#xbb;</button>
+                </div>
+            </div>
+            <div class="stat-bar">
+                <strong>Pontos de Shot:</strong>
+                <div class="bar-container green-bar">
+                    <button class="decrement" onclick="updateStat('shot-current', -5)">&#xab;</button>
+                    <button class="decrement-small" onclick="updateStat('shot-current', -1)">&#x2039;</button>
+                    <span id="shot-current">0</span>/<span id="shot-max">6</span>
+                    <button class="increment-small" onclick="updateStat('shot-current', 1)">&#x203a;</button>
+                    <button class="increment" onclick="updateStat('shot-current', 5)">&#xbb;</button>
+                </div>
+            </div>            
+        </div>
+
+        <!-- Habilidades -->
+        <div class="abilities">
+            <h3>Habilidades</h3>
+            <ul>
+                <li class="ability" onclick="toggleAbility(this)">
+                    <span class="ability-name">NÃO PERCO A POSE!</span>
+                    <div class="ability-description">Você é linde demais para 
+morrer. Uma vez por encontro, você pode re-rolar seus dados quando vazar dali.</div>
+                </li>
+                <li class="ability" onclick="toggleAbility(this)">
+                    <span class="ability-name">JOVEM DEMAIS PARA MORRER</span>
+                    <div class="ability-description">Você acredita que ainda tem muito o que viver e por isso sente pavor da morte. Uma vez por cena, sempre que estiver sendo atacado e com menos de 5 PV você pode rolar um teste de fuga DT 5. Caso passe, você entra em “Frenesi” e despista o seu perseguidor. Caso falhe, você automaticamente enlouquece.</div>
+                </li>
+                <!-- Adicione mais habilidades conforme necessário -->
+            </ul>
+        </div>
+        
+        <div class="character-story">
+            <h3>História</h3>
+            <p>???</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
