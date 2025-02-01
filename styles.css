@@ -64,6 +64,14 @@ body {
     color: #fff;
 }
 
+.treinado-container {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #fff;
+}
+
 .red-bar {
     background-color: #b22222;
 }
@@ -74,6 +82,14 @@ body {
 
 .green-bar {
     background-color: #DF811B;
+}
+
+.treinado {
+  background-color: #0CFF00;
+}
+
+.destreinado {
+  background-color: #FC1A38;
 }
 
 .tensao-bar {
