@@ -67,7 +67,17 @@
                     <button class="increment-small" onclick="updateStat('shot-current', 1)">&#x203a;</button>
                     <button class="increment" onclick="updateStat('shot-current', 5)">&#xbb;</button>
                 </div>
-            </div>            
+            </div>  
+            <div class="stat-bar">
+    <strong>Pontos de tensão:</strong>
+    <div class="bar-container tensao-bar">
+        <button class="decrement" onclick="updateTensionPoints(-5)">&#xab;</button>
+        <button class="decrement-small" onclick="updateTensionPoints(-1)">&#x2039;</button>
+        <span id="tension-current">0</span>/<span id="tension-max">10</span>
+        <button class="increment-small" onclick="updateTensionPoints(1)">&#x203a;</button>
+        <button class="increment" onclick="updateTensionPoints(5)">&#xbb;</button>
+    </div>
+</div>   
         </div>
 
         <!-- Habilidades -->
@@ -82,6 +92,10 @@ morrer. Uma vez por encontro, você pode re-rolar seus dados quando vazar dali.<
                 <li class="ability" onclick="toggleAbility(this)">
                     <span class="ability-name">JOVEM DEMAIS PARA MORRER</span>
                     <div class="ability-description">Você acredita que ainda tem muito o que viver e por isso sente pavor da morte. Uma vez por cena, sempre que estiver sendo atacado e com menos de 5 PV você pode rolar um teste de fuga DT 5. Caso passe, você entra em “Frenesi” e despista o seu perseguidor. Caso falhe, você automaticamente enlouquece.</div>
+                </li>
+   <li class="ability" onclick="toggleAbility(this)">
+                    <span class="ability-name">MELHOR AMIGO</span>
+                    <div class="ability-description">Sempre que entrar em uma cena de fuga e você estiver junto de outro personagem que esteja entre suas pessoas favoritas, vocês podem “Dar as mãos” para receber +1d nos testes de fuga. Caso vocês soltem as mãos durante a cena de fuga, ambos recebem a condição “Peso na consciência”  e -2d nos testes de fuga.</div>
                 </li>
                 <!-- Adicione mais habilidades conforme necessário -->
             </ul>
